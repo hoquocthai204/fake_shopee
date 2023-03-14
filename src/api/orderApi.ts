@@ -1,4 +1,4 @@
-import { OrderInformation } from 'models/order/OrderInformation';
+import { OrderInformation } from 'models/order/orderInformation';
 import axiosClient, { config } from './axiosClient';
 
 const orderApi = {

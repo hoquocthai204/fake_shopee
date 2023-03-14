@@ -2,7 +2,7 @@ import { Button, InputNumber } from 'antd';
 import orderApi from 'api/orderApi';
 import productApi from 'api/productApi';
 import walletApi from 'api/walletApi';
-import Breadcrumb from 'components/Common/breadcrumb';
+import Breadcrumb from 'components/Common/Breadcrumb';
 import { ModalComponent } from 'components/Common/ModalComponent';
 import { CoinIcon } from 'components/Icons/CoinIcon';
 import { ProductInfo } from 'models/product/productInfo';
