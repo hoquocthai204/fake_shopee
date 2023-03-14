@@ -81,6 +81,10 @@ export const LandingLayoutHeader: React.FunctionComponent<LandingLayoutHeaderPro
     }
   }, []);
 
+  const handleOpenCart = () => {
+    navigate('cart');
+  };
+
   const content = (
     <>
       <div className="auth-option">
@@ -120,24 +124,24 @@ export const LandingLayoutHeader: React.FunctionComponent<LandingLayoutHeaderPro
             <MainLogo />
             <ul className="landing-header__nav-links">
               <li>
-                <Link style={{ color: 'white' }} to={'/wallet'}>
+                <Link style={{ color: 'white' }} to={'wallet'}>
                   Wallet
                 </Link>
               </li>
               <li>
-                <Link style={{ color: 'white' }} to={'/about'}>
+                <Link style={{ color: 'white' }} to={'about'}>
                   About
                 </Link>
               </li>
               {token && isMerchant && (
                 <li>
-                  <Link style={{ color: 'white' }} to={'/products'}>
+                  <Link style={{ color: 'white' }} to={'products'}>
                     Products
                   </Link>
                 </li>
               )}
               <li>
-                <Link style={{ color: 'white' }} to={'/price'}>
+                <Link style={{ color: 'white' }} to={'price'}>
                   Pricing
                 </Link>
               </li>
@@ -151,7 +155,7 @@ export const LandingLayoutHeader: React.FunctionComponent<LandingLayoutHeaderPro
               </>
             ) : (
               <>
-                <ShoppingCartOutlined />
+                <ShoppingCartOutlined onClick={handleOpenCart} />
 
                 <Popover
                   onVisibleChange={handlePopover}
